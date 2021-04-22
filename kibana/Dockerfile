@@ -14,7 +14,7 @@ RUN yum install -y glibc-static gcc make
 RUN mkdir /usr/share/kibana
 WORKDIR /usr/share/kibana
 
-RUN curl -sL https://artifacts.elastic.co/downloads/kibana/kibana-oss-7.3.2-linux-x86_64.tar.gz | tar --strip-components=1 -zxf -
+RUN curl -sL https://artifacts.elastic.co/downloads/kibana/kibana-oss-7.10.2-linux-x86_64.tar.gz | tar --strip-components=1 -zxf -
 # replace amd64 node with arm64
 RUN rm -rf /usr/share/kibana/node/* && \
     curl -sL https://nodejs.org/dist/v10.15.2/node-v10.15.2-linux-arm64.tar.gz | tar -C /usr/share/kibana/node/ --strip-components=1 -xzf -
